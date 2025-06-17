@@ -1,0 +1,25 @@
+Script lancé
+Trainer ID: 1
+Données reçues: {"id":1}
+Recherche de l'équipe ID: 1
+Équipe supprimée avec succès
+Script lancé
+Trainer ID: 1
+Données reçues: {"id":4}
+Recherche de l'équipe ID: 4
+Équipe supprimée avec succès
+Script lancé
+Trainer ID: 1
+Données reçues: {"id":3}
+Recherche de l'équipe ID: 3
+Équipe supprimée avec succès
+Script lancé
+Trainer ID: 4
+Données reçues: {"id":6}
+Recherche de l'équipe ID: 6
+Équipe supprimée avec succès
+Script lancé
+Trainer ID: 4
+Données reçues: {"id":7}
+Recherche de l'équipe ID: 7
+Équipe supprimée avec succès
