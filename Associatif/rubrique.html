@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos actions - Voix Libre</title>
+    <link rel="icon" type="image/png" href="miniature.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+    <header>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div>
+            <h1>Voix Libre</h1>
+            <p>Parce que chaque silence mérite d'être entendu.</p>
+        </div>
+        <nav id="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="rubrique.html" aria-current="page">Nos actions</a></li>
+                <li><a href="formulaire.html">Contact</a></li>
+                <li><a href="rgpd.html">Mentions légales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu-principal" tabindex="-1">
+        <section>
+            <h2>Nos actions principales</h2>
+            <ul class="actions-list">
+                <li>
+                    <div class="icon" aria-hidden="true">🔊</div>
+                    <h3>Ateliers d'expression</h3>
+                    <p>Des ateliers collectifs pour explorer les moyens d'expression non verbale et découvrir les technologies vocales adaptées.</p>
+                </li>
+                <li>
+                    <div class="icon" aria-hidden="true">🤖</div>
+                    <h3>Accompagnement IA</h3>
+                    <p>Des solutions personnalisées basées sur l'intelligence artificielle pour faciliter la communication au quotidien.</p>
+                </li>
+                <li>
+                    <div class="icon" aria-hidden="true">📢</div>
+                    <h3>Sensibilisation</h3>
+                    <p>Des interventions dans les écoles, entreprises et événements pour sensibiliser au handicap invisible et à l'importance de la voix.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Projets en cours</h2>
+            <ul class="tools-list">
+                <li>
+                    <h4>Voix Synthèse 2.0</h4>
+                    <p>Développement d'une nouvelle version de notre application mobile, avec reconnaissance émotionnelle et personnalisation avancée.</p>
+                </li>
+                <li>
+                    <h4>Plateforme d'entraide</h4>
+                    <p>Création d'un espace en ligne pour échanger, partager des astuces et s'entraider entre bénéficiaires et familles.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Projets réalisés</h2>
+            <ul class="tools-list">
+                <li>
+                    <h4>Tablette Communicante</h4>
+                    <p>Distribution de 30 tablettes équipées de pictogrammes et d'IA dans des établissements spécialisés.</p>
+                </li>
+                <li>
+                    <h4>Campagne "Silence, on s'exprime !"</h4>
+                    <p>Opération de sensibilisation nationale sur le handicap invisible et la communication alternative.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="call-to-action">
+            <h2>Vous souhaitez proposer une action ou un projet ?</h2>
+            <p>Contactez-nous via le <a href="formulaire.html" class="cta-link">formulaire</a> ou rejoignez notre équipe de bénévoles !</p>
+        </section>
+    </main>
+    <footer>
+        <small class="note-rgpd">Ce site respecte la confidentialité de vos données. <a href="rgpd.html">En savoir plus</a>.</small>
+    </footer>
+    <script>
+    // Menu burger responsive
+    const burger = document.querySelector('.burger');
+    const nav = document.getElementById('main-nav');
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+    </script>
+</body>
+</html>

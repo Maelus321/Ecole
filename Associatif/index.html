@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Voix Libre</title>
+    <link rel="icon" type="image/png" href="miniature.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+    <header>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div>
+            <h1>Voix Libre</h1>
+            <p>Parce que chaque silence mérite d'être entendu.</p>
+        </div>
+        <nav id="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="rubrique.html">Nos actions</a></li>
+                <li><a href="formulaire.html">Contact</a></li>
+                <li><a href="rgpd.html">Mentions légales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu-principal" tabindex="-1">
+        <section>
+            <h2>Bienvenue sur le site de l'association Voix Libre</h2>
+            <p class="mission">Notre mission : redonner une voix aux personnes muettes grâce aux technologies vocales, à l'intelligence artificielle et à l'expression non verbale. Découvrez nos outils, ateliers, accompagnements personnalisés et actions de sensibilisation.</p>
+            <a href="formulaire.html" class="cta-main" role="button">Créer ma voix</a>
+            <img src="https://media.istockphoto.com/id/1046447804/fr/photo/dans-lh%C3%B4pital-malade-m%C3%A2le-dort-sur-le-lit-%C3%A9quipement-de-moniteur-de-fr%C3%A9quence-cardiaque-est.jpg?s=612x612&w=0&k=20&c=hA_nR83-GclTyn7SaJxaM6B2yB1O9vorKRdmfD04FN4=" alt="Illustration Voix Libre" />
+        </section>
+
+        <section>
+            <h2>Nos actions</h2>
+            <ul class="actions-list">
+                <li>
+                    <div class="icon" aria-hidden="true">🔊</div>
+                    <h3>Ateliers d'expression</h3>
+                    <p>Des ateliers collectifs pour explorer les moyens d'expression non verbale et découvrir les technologies vocales adaptées.</p>
+                </li>
+                <li>
+                    <div class="icon" aria-hidden="true">🤖</div>
+                    <h3>Accompagnement IA</h3>
+                    <p>Des solutions personnalisées basées sur l'intelligence artificielle pour faciliter la communication au quotidien.</p>
+                </li>
+                <li>
+                    <div class="icon" aria-hidden="true">📢</div>
+                    <h3>Sensibilisation</h3>
+                    <p>Des interventions dans les écoles, entreprises et événements pour sensibiliser au handicap invisible et à l'importance de la voix.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Nos outils numériques</h2>
+            <div class="tools-list">
+                <div>
+                    <h4>Voix Synthèse</h4>
+                    <p>Application mobile permettant de générer une voix personnalisée à partir de textes ou d'émotions.</p>
+                </div>
+                <div>
+                    <h4>Tablette Communicante</h4>
+                    <p>Tablette équipée de pictogrammes et d'IA pour faciliter l'expression dans toutes les situations.</p>
+                </div>
+                <div>
+                    <h4>Assistant Gestuel</h4>
+                    <p>Outil d'aide à la communication par gestes, connecté à une synthèse vocale intelligente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ils témoignent</h2>
+            <blockquote class="temoignage">
+                <p>« Grâce à Voix Libre, j'ai pu retrouver confiance en moi et m'exprimer lors de réunions de famille. »</p>
+                <footer>— Marie, bénéficiaire</footer>
+            </blockquote>
+            <blockquote class="temoignage">
+                <p>« Les ateliers sont très humains et l'équipe est à l'écoute. Les outils numériques sont bluffants ! »</p>
+                <footer>— Ahmed, participant</footer>
+            </blockquote>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Rejoignez-nous !</h2>
+            <p>Vous souhaitez devenir bénévole, proposer un projet ou soutenir l'association ? <a href="formulaire.html" class="cta-link">Contactez-nous</a> ou suivez-nous sur les réseaux sociaux.</p>
+        </section>
+    </main>
+    <footer>
+        <small class="note-rgpd">Ce site respecte la confidentialité de vos données. <a href="rgpd.html">En savoir plus</a>.</small>
+    </footer>
+    <script>
+    // Menu burger responsive
+    const burger = document.querySelector('.burger');
+    const nav = document.getElementById('main-nav');
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+    </script>
+</body>
+</html> 

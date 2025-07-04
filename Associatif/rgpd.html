@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales & RGPD - Voix Libre</title>
+    <link rel="icon" type="image/png" href="miniature.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+    <header>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div>
+            <h1>Voix Libre</h1>
+            <p>Parce que chaque silence mérite d'être entendu.</p>
+        </div>
+        <nav id="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="rubrique.html">Nos actions</a></li>
+                <li><a href="formulaire.html">Contact</a></li>
+                <li><a href="rgpd.html" aria-current="page">Mentions légales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu-principal" tabindex="-1">
+        <section>
+            <h2>Mentions légales</h2>
+            <p><strong>Éditeur du site :</strong> Association Voix Libre, 12 rue de l'Expression, 75000 Paris<br>
+            Email : contact@voixlibre.fr</p>
+            <p><strong>Directeur de la publication :</strong> Marc Lebreton</p>
+            <p><strong>Hébergement :</strong> OVH, 2 rue Kellermann, 59100 Roubaix</p>
+        </section>
+        <section>
+            <h2>Protection des données personnelles (RGPD)</h2>
+            <h3>Finalité des données collectées</h3>
+            <p>Les informations recueillies via nos formulaires servent uniquement à répondre à vos demandes, à vous informer sur nos actions ou à gérer votre participation à nos activités. Elles ne sont jamais utilisées à des fins commerciales.</p>
+            <h3>Durée de conservation</h3>
+            <p>Les données sont conservées pendant la durée strictement nécessaire à la gestion de votre demande ou de votre relation avec l'association, puis supprimées.</p>
+            <h3>Sécurité</h3>
+            <p>Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données et empêcher tout accès non autorisé.</p>
+            <ul>
+                <li>Vous disposez d'un droit d'accès, de rectification, d'opposition, de limitation et de suppression de vos données.</li>
+                <li>Pour toute demande, contactez-nous à <a href="mailto:contact@voixlibre.fr">contact@voixlibre.fr</a>.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Propriété intellectuelle</h2>
+            <p>L'ensemble des contenus (textes, images, logos, etc.) présents sur ce site sont la propriété exclusive de l'association Voix Libre ou de ses partenaires. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite, est interdite.</p>
+        </section>
+        <section>
+            <h2>Responsabilité</h2>
+            <p>L'association Voix Libre s'efforce de fournir des informations exactes et à jour, mais ne saurait être tenue responsable des erreurs, omissions ou d'une absence de disponibilité des informations. Les liens vers d'autres sites sont donnés à titre informatif et n'engagent pas la responsabilité de l'association.</p>
+        </section>
+        <section>
+            <h2>Utilisation des réseaux sociaux</h2>
+            <p>Ce site peut proposer des liens vers nos réseaux sociaux (Facebook, Twitter, Instagram, etc.). Nous vous invitons à consulter les politiques de confidentialité de ces plateformes pour connaître l'usage de vos données personnelles.</p>
+        </section>
+        <section>
+            <h2>Cookies</h2>
+            <p>Ce site n'utilise pas de cookies à des fins de suivi publicitaire. Seuls des cookies techniques nécessaires à la navigation peuvent être utilisés.</p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Pour toute question relative à la protection de vos données ou à l'utilisation du site, vous pouvez nous écrire via le <a href="formulaire.html">formulaire de contact</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <small class="note-rgpd">Ce site respecte la confidentialité de vos données. <a href="rgpd.html">En savoir plus</a>.</small>
+    </footer>
+    <script>
+    // Menu burger responsive
+    const burger = document.querySelector('.burger');
+    const nav = document.getElementById('main-nav');
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+    </script>
+</body>
+</html>

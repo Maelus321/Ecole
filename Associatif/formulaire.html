@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Voix Libre</title>
+    <link rel="icon" type="image/png" href="miniature.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#contenu-principal" class="skip-link">Aller au contenu principal</a>
+    <header>
+        <button class="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div>
+            <h1>Voix Libre</h1>
+            <p>Parce que chaque silence mérite d'être entendu.</p>
+        </div>
+        <nav id="main-nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="rubrique.html">Nos actions</a></li>
+                <li><a href="formulaire.html" aria-current="page">Contact</a></li>
+                <li><a href="rgpd.html">Mentions légales</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenu-principal" tabindex="-1">
+        <section>
+            <h2>Contactez-nous</h2>
+            <form action="mailto:mael.saudrais@ecole-hexagone.com" method="post" class="form-contact" enctype="text/plain">
+                <label for="nom">Nom&nbsp;:</label>
+                <input type="text" id="nom" name="nom" required autocomplete="name">
+
+                <label for="message">Votre message&nbsp;:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="form-rgpd">
+                    <input type="checkbox" id="rgpd" name="rgpd" required>
+                    <label for="rgpd">J'accepte que mes données soient utilisées pour me recontacter (voir <a href="rgpd.html" target="_blank">mentions légales</a>).</label>
+                </div>
+
+                <button type="submit" class="cta-main">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <small class="note-rgpd">Ce site respecte la confidentialité de vos données. <a href="rgpd.html">En savoir plus</a>.</small>
+    </footer>
+    <script>
+    // Menu burger responsive
+    const burger = document.querySelector('.burger');
+    const nav = document.getElementById('main-nav');
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    // Formulaire : mailto dynamique
+    const form = document.querySelector('.form-contact');
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nom = document.getElementById('nom').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const email = 'mael.saudrais@ecole-hexagone.com'; // Remplace par ton adresse
+            const subject = encodeURIComponent(nom);
+            const body = encodeURIComponent(message);
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        });
+    }
+    </script>
+</body>
+</html>
